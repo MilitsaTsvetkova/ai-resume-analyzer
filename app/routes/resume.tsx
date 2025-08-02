@@ -5,8 +5,6 @@ import Details from "~/components/Details";
 import Summary from "~/components/Summary";
 import { usePuterStore } from "~/lib/puter";
 
-import { resumes } from "constants/data";
-
 export const meta = () => {
   return [
     { title: "Resumind | Review" },
@@ -20,9 +18,7 @@ const Resume = () => {
 
   const [imageURL, setImageURL] = useState<string | null>(null);
   const [resumeUrl, setResumeUrl] = useState<string | null>(null);
-  const [feedback, setFeedback] = useState<Feedback | null>(
-    resumes[0].feedback || null
-  );
+  const [feedback, setFeedback] = useState<Feedback | null>(null);
 
   const navigate = useNavigate();
 
